@@ -1,2 +1,0 @@
-# mybio
-my portfolio
