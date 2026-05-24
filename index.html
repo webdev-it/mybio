@@ -3,142 +3,414 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио | Web Developer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Abdumalik Abdumalikov — Designer & Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-</head>
 <body>
-    
-    <div id="loader" class="loader">
-        <div class="spinner"></div>
-    </div>
-    <header class="header">
-        <div class="container">
-            <div class="logo" id="logo">AA</div>
-            <nav class="nav">
-                <a href="#about">Обо мне</a>
-                <a href="#skills">Навыки</a>
-                <a href="#projects">Проекты</a>
-                <a href="#contacts">Контакты</a>
-            </nav>
-            <div class="header-title">
-                <h1>Abdumalik Abdumalikov</h1>
-                <p>Web Developer</p>
+    <!-- Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-trail"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" data-cursor="pointer">aa</a>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="theme-toggle" id="themeToggle">
+                <span class="toggle-icon">☀️</span>
             </div>
         </div>
-    </header>
-    
-    <main>
-        <br><br><br><br>
-        
-        <section id="about" class="about section">
-            <div class="container">
-                <h2>Обо мне</h2>
-                <p>Я — веб-разработчик, 3D-дизайнер, артист, фильммэйкер и музыкант. Создаю современные сайты, программирую приложения, моделирую в Blender, пишу музыку в FL Studio, занимаюсь цифровым искусством и видеомонтажом. Люблю учиться новому, воплощать идеи в жизнь с помощью кода и творчества, экспериментировать с технологиями и искусством. Моя цель — вдохновлять и удивлять, объединяя разные сферы в уникальные проекты.</p>
-                <blockquote class="quote">«Творчество — это способ сделать невозможное возможным»</blockquote>
-            </div>
-        </section>
-        <div class="header-title"><h1>Моё искусство - Моя жизнь</h1></div>
+    </nav>
 
-        <section id="interests" class="section">
-            <div class="container">
-                <h2 class="section-title interests-title">Интересы</h2>
-                <ul class="interests-list">
-                    <li>3D-моделирование и анимация (Blender)</li>
-                    <li>Веб-разработка и UI/UX-дизайн</li>
-                    <li>Музыка и саунд-дизайн (FL Studio)</li>
-                    <li>Видеомонтаж и спецэффекты</li>
-                    <li>Цифровое искусство и иллюстрация</li>
-                    <li>Фотография и кинематограф</li>
-                    <li>Изобретательство и инженерия</li>
-                    <li>Саморазвитие и обучение новым технологиям</li>
-                </ul>
-            </div>
-        </section>
-        
-        <section id="skills" class="skills section">
-            <div class="container">
-                <h2 class="section-title skills-title">Навыки</h2>
-                <div class="skills-list">
-                    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"><span>HTML5</span></div>
-                    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"><span>CSS3</span></div>
-                    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"><span>JavaScript</span></div>
-                    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"><span>Python</span></div>
-                    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"><span>React</span></div>
-                    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"><span>Node.js</span></div>
-                    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" alt="Blender"><span>Blender</span></div>
-                    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Photoshop"><span>Photoshop</span></div>
-                    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-original.svg" alt="After Effects"><span>After Effects</span></div>
-                    <div class="skill"><img src="https://w7.pngwing.com/pngs/659/8/png-transparent-baby-carrot-illustration-digital-audio-fl-studio-mobile-android-line-studio-food-studio-computer-wallpaper-thumbnail.png" alt="FL Studio" style="border-radius: 10px;"><span>FL Studio</span></div>
-                </div>
-                <p class="skills-desc">Владею современными веб-технологиями, программированием, 3D-моделированием (Blender), цифровым искусством, созданием музыки и видео. Постоянно учусь и экспериментирую с новыми инструментами для творчества.</p>
-            </div>
-        </section>
-        <section id="projects" class="projects section">
-            <div class="container">
-                <h2>Проекты</h2>
-                <div class="projects-list">
-                    <div class="project-card">
-                        <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=400&q=80" alt="3D Art">
-                        <h3>3D Арт и Анимация</h3>
-                        <p>Коллекция 3D-моделей и анимаций, созданных в Blender. Визуализация идей, персонажей и сцен для различных проектов.</p>
-                        <a href="https://youtube.com/@abdumalikov-3d" class="btn" target="_blank">Посмотреть</a>
-                    </div>
-                    <div class="project-card">
-                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=400&q=80" alt="Music Production">
-                        <h3>Музыка и Саунд-дизайн</h3>
-                        <p>Авторская музыка и саундтреки, созданные в FL Studio. Эксперименты с жанрами и звуком для видео и игр.</p>
-                        <a href="#projects" class="btn" target="_self">Послушать</a>
-                    </div>
-                    <div class="project-card">
-                        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Video Art">
-                        <h3>Видео и Фильмы</h3>
-                        <p>Короткометражные фильмы, клипы и визуальные эксперименты. Монтаж и пост-продакшн в After Effects и Premiere.</p>
-                        <a href="#projects" class="btn" target="_self">Смотреть</a>
-                    </div>
-                    <div class="project-card">
-                        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" alt="Digital Art">
-                        <h3>Digital Art</h3>
-                        <p>Галерея цифровых иллюстраций, концепт-артов и графических работ, выполненных в Photoshop и других редакторах.</p>
-                        <a href="#projects" class="btn" target="_self">Галерея</a>
-                    </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="word" data-cursor="grab">Creative</span>
+                    <span class="word" data-cursor="grab">Designer</span>
+                    <span class="word" data-cursor="grab">&</span>
+                    <span class="word" data-cursor="grab">Developer</span>
+                </h1>
+                <p class="hero-subtitle">Hi! I am Abdumalik Abdumalikov and I craft minimal, modern digital experiences that inspire and engage</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                    <a href="#projects" class="btn btn-secondary">View Work</a>
                 </div>
             </div>
-        </section>
-        <section id="contacts" class="contacts section">
-            <div class="container">
-                <h2>Контакты</h2>
-                <div class="contacts-list">
-                    <a href="https://github.com/webdev-it" target="_blank" title="GitHub" class="contact-icon">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
-                    </a>
-                    <a href="https://linkedin.com/in/webdev-it" target="_blank" title="LinkedIn" class="contact-icon">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
-                    </a>
-                    <a href="https://t.me/abdumalikovvvvvvv" target="_blank" title="Telegram" class="contact-icon">
-                        <img src="https://static.cdnlogo.com/logos/t/39/telegram.svg" alt="Telegram">
-                    </a>
+            <div class="hero-visual">
+                <div class="orb orb-1"></div>
+                <div class="orb orb-2"></div>
+                <div class="orb orb-3"></div>
+                <div class="geometric-shape shape-1"></div>
+                <div class="geometric-shape shape-2"></div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-dot"></div>
+            <p>Scroll to explore</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <div class="header-line"></div>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        I'm a creative professional specializing in <span class="highlight">Web Design</span>, 
+                        <span class="highlight">Graphic Design</span>, and <span class="highlight">3D Visualization</span>. 
+                        Based in <span class="location-badge">Tajikistan</span>, I work with clients worldwide to bring their vision to life.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">30+</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-list">
+                    <div class="list-item">
+                        <div class="list-icon">🎨</div>
+                        <h3>Design</h3>
+                        <p>UI/UX, Branding, and Visual Identity design in Figma</p>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-icon">🎬</div>
+                        <h3>Media</h3>
+                        <p>Video editing, Photography, and Content creation</p>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-icon">🏗️</div>
+                        <h3>3D</h3>
+                        <p>3D modeling, Product visualization in Blender</p>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-icon">💻</div>
+                        <h3>Development</h3>
+                        <p>HTML, CSS, JavaScript, Web technologies</p>
+                    </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <div class="section-header">
+                <h2>Skills & Tools</h2>
+                <div class="header-line"></div>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="category-title">Design</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">UI/UX Design</span>
+                        <span class="skill-tag">Prototyping</span>
+                        <span class="skill-tag">Design Systems</span>
+                        <span class="skill-tag">Branding</span>
+                        <span class="skill-tag">Responsive Design</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="category-title">3D & Graphics</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Blender</span>
+                        <span class="skill-tag">3D Modeling</span>
+                        <span class="skill-tag">Product Viz</span>
+                        <span class="skill-tag">Rendering</span>
+                        <span class="skill-tag">Photoshop</span>
+                        <span class="skill-tag">After Effects</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="category-title">Media Production</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Video Editing</span>
+                        <span class="skill-tag">Motion Graphics</span>
+                        <span class="skill-tag">Photography</span>
+                        <span class="skill-tag">Sound Design</span>
+                        <span class="skill-tag">Color Grading</span>
+                        <span class="skill-tag">Cinematography</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="category-title">Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Web Design</span>
+                        <span class="skill-tag">Responsive</span>
+                        <span class="skill-tag">Modern Web</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-interactive">
+                <h3>Try hovering over skills to see proficiency levels</h3>
+                <div class="proficiency-bar">
+                    <div class="bar-segment" style="--progress: 95%; --color: #FF6B6B;" data-progress="95%">
+                        <span class="bar-label">UI/UX Design</span>
+                    </div>
+                    <div class="bar-segment" style="--progress: 90%; --color: #4ECDC4;" data-progress="90%">
+                        <span class="bar-label">Figma</span>
+                    </div>
+                    <div class="bar-segment" style="--progress: 88%; --color: #FFE66D;" data-progress="88%">
+                        <span class="bar-label">Blender 3D</span>
+                    </div>
+                    <div class="bar-segment" style="--progress: 85%; --color: #95E1D3;" data-progress="85%">
+                        <span class="bar-label">Video Editing</span>
+                    </div>
+                    <div class="bar-segment" style="--progress: 80%; --color: #A8E6CF;" data-progress="80%">
+                        <span class="bar-label">Web Development</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <div class="header-line"></div>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="webdesign.png" alt="Web Applications">
+                        <div class="project-overlay">
+                            <span class="project-badge">Web Design</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Web Applications for Business</h3>
+                        <p>Designing modern, responsive web apps for e-commerce, companies, and events</p>
+                        <div class="project-tags">
+                            <span>UI/UX</span>
+                            <span>Figma</span>
+                            <span>Responsive</span>
+                        </div>
+                        <a href="https://ismartshop.org" class="project-link">View Case Study →</a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="3d">
+                    <div class="project-image">
+                        <img src="coke.png" alt="3D Design">
+                        <div class="project-overlay">
+                            <span class="project-badge">3D Design</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>3D Product Visualization</h3>
+                        <p>Creating stunning 3D models and product visualizations in Blender</p>
+                        <div class="project-tags">
+                            <span>Blender</span>
+                            <span>Modeling</span>
+                            <span>Rendering</span>
+                        </div>
+                        <a href="https://www.youtube.com/@abdumalikov-3d" class="project-link" target="_blank">View Portfolio →</a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="branding">
+                    <div class="project-image">
+                        <img src="brand.png" alt="Branding">
+                        <div class="project-overlay">
+                            <span class="project-badge">Branding</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Brand Identity & Visual Content</h3>
+                        <p>Developing complete brand systems, visual identity, and digital content</p>
+                        <div class="project-tags">
+                            <span>Branding</span>
+                            <span>Design</span>
+                            <span>Content</span>
+                        </div>
+                        <a href="https://felixme.online" class="project-link">View Brands →</a>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="media">
+                    <div class="project-image">
+                        <img src="bmw11.png" alt="Video Production">
+                        <div class="project-overlay">
+                            <span class="project-badge">Media</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Video edits & Motion Graphics</h3>
+                        <p>Professional video editing and motion design for brands and campaigns</p>
+                        <div class="project-tags">
+                            <span>Video</span>
+                            <span>Motion</span>
+                            <span>Editing</span>
+                        </div>
+                        <a href="https://www.instagram.com/_abdumalikov.08_?igsh=MTZzcmM0ZjdreGN2eQ%3D%3D&utm_source=qr" class="project-link">Watch Videos →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section experience">
+        <div class="container">
+            <div class="section-header">
+                <h2>Experience</h2>
+                <div class="header-line"></div>
+            </div>
+
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-period">2023 — Present</div>
+                        <h3>Freelance Designer & Developer</h3>
+                        <p>Creating stunning web designs, 3D visualizations, and digital content for global clients. Specializing in UI/UX design, brand development, and product visualization.</p>
+                        <div class="timeline-tags">
+                            <span>UI/UX</span>
+                            <span>Figma</span>
+                            <span>Blender</span>
+                            <span>Web Design</span>
+                            <span>Branding</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Let's Work Together</h2>
+                <div class="header-line"></div>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p class="contact-intro">I'm always interested in hearing about new projects and opportunities. Let's connect!</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">✉️</div>
+                            <div class="method-content">
+                                <h4>Email</h4>
+                                <a href="mailto:abdumalikabdumalikov72@gmail.com">abdumalikabdumalikov72@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">💬</div>
+                            <div class="method-content">
+                                <h4>Telegram</h4>
+                                <a href="https://t.me/abdumalikovvvvvvv" target="_blank">@abdumalikovvvvvvv</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">📍</div>
+                            <div class="method-content">
+                                <h4>Location</h4>
+                                <p>Tajikistan</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h4>Also on</h4>
+                        <div class="social-icons">
+                            <a href="https://t.me/abdumalikovvvvvvv" target="_blank" class="social-icon" title="Telegram">📱</a>
+                            <a href="#" class="social-icon" title="Instagram">📸</a>
+                            <a href="#" class="social-icon" title="YouTube">🎥</a>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" name="from_name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="from_email" placeholder="Your email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <span>© 2025 Абдумалик Абдумаликов</span>
-            <a href="https://github.com/webdev-it" target="_blank">GitHub</a>
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>© 2026 Abdumalik Abdumalikov. All rights reserved.</p>
+                    <p class="easter-egg" id="easterEgg">Made with ❤️ and some magic ✨</p>
+                </div>
+                <div class="footer-nav">
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
         </div>
     </footer>
-    <div class="marquee"><span>Вход в мой мир творчества и технологий! — Abdumalik Abdumalikov — Портфолио 2025</span></div>
-    <div id="secret-message" class="secret-message">
-        It was so cool! <br><br>
-        <img src="https://www.meme-arsenal.com/memes/8934d726739efb45558d72fe48d8b6a0.jpg" style="width: auto; height: 100px; border-radius: 20px;">
-    
-    
+
+    <!-- Easter Egg Modal -->
+    <div id="easterEggModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-body">
+                <h2>🎉 You found it!</h2>
+                <p>Congratulations on discovering the secret! This is a special message for the curious ones.</p>
+                <p>You've got great taste in exploring. Keep that curiosity alive!</p>
+                <div class="confetti" id="confetti"></div>
+            </div>
+        </div>
     </div>
+
+    <!-- Loading bar -->
+    <div class="loading-bar"></div>
+
     <script src="script.js"></script>
 </body>
-</html>
 
+</html>
