@@ -11,15 +11,23 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu"><span></span><span></span><span></span></button>
             <a href="#" class="nav-logo" data-cursor="pointer">aa</a>
             <ul class="nav-menu">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#about" class="nav-link" data-key="nav_about">About</a></li>
+                <li><a href="#skills" class="nav-link" data-key="nav_skills">Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-key="nav_projects">Projects</a></li>
+                <li><a href="#contact" class="nav-link" data-key="nav_contact">Contact</a></li>
             </ul>
-            <div class="theme-toggle" id="themeToggle">
-                <span class="toggle-icon">☀️</span>
+            <div class="nav-controls">
+                <div class="language-toggle" id="languageToggle">
+                    <span class="lang-current">EN</span>
+                    <span class="lang-separator">/</span>
+                    <span class="lang-other">РУ</span>
+                </div>
+                <div class="theme-toggle" id="themeToggle">
+                    <span class="toggle-icon">☀️</span>
+                </div>
             </div>
         </div>
     </nav>
@@ -29,18 +37,21 @@
         <div class="hero-content">
             <div class="hero-text">
                 <h1 class="hero-title">
-                    <span class="word" data-cursor="grab">Creative</span>
-                    <span class="word" data-cursor="grab">Designer</span>
-                    <span class="word" data-cursor="grab">&</span>
-                    <span class="word" data-cursor="grab">Developer</span>
+                    <span class="word" data-key="hero_creative">Creative</span>
+                    <span class="word" data-key="hero_designer">Designer</span>
+                    <span class="word" data-key="hero_and">&</span>
+                    <span class="word" data-key="hero_developer">Developer</span>
                 </h1>
-                <p class="hero-subtitle">Hi! I am Abdumalik Abdumalikov and I craft minimal, modern digital experiences that inspire and engage</p>
+                <p class="hero-subtitle" data-key="hero_subtitle">Hi! I am Abdumalik Abdumalikov and I craft minimal, modern digital experiences that inspire and engage</p>
                 <div class="cta-buttons">
-                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
-                    <a href="#projects" class="btn btn-secondary">View Work</a>
+                    <a href="#contact" class="btn btn-primary" data-key="btn_contact">Get in Touch</a>
+                    <a href="#projects" class="btn btn-secondary" data-key="btn_projects">View Work</a>
                 </div>
             </div>
             <div class="hero-visual">
+                <div class="profile-circle">
+                    <img src="profile.jpg" alt="Abdumalik Abdumalikov" class="profile-image">
+                </div>
                 <div class="orb orb-1"></div>
                 <div class="orb orb-2"></div>
                 <div class="orb orb-3"></div>
@@ -50,7 +61,7 @@
         </div>
         <div class="scroll-indicator">
             <div class="scroll-dot"></div>
-            <p>Scroll to explore</p>
+            <p data-key="scroll_explore">Scroll to explore</p>
         </div>
     </section>
 
@@ -58,13 +69,13 @@
     <section id="about" class="section about">
         <div class="container">
             <div class="section-header">
-                <h2>About Me</h2>
+                <h2 data-key="section_about">About Me</h2>
                 <div class="header-line"></div>
             </div>
             
             <div class="about-content">
                 <div class="about-text">
-                    <p class="about-intro">
+                    <p class="about-intro" data-key="about_intro">
                         I'm a creative professional specializing in <span class="highlight">Web Design</span>, 
                         <span class="highlight">Graphic Design</span>, and <span class="highlight">3D Visualization</span>. 
                         Based in <span class="location-badge">Tajikistan</span>, I work with clients worldwide to bring their vision to life.
@@ -72,15 +83,15 @@
                     <div class="about-stats">
                         <div class="stat-item">
                             <span class="stat-number">3+</span>
-                            <span class="stat-label">Years Experience</span>
+                            <span class="stat-label" data-key="about_experience">Years Experience</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">50+</span>
-                            <span class="stat-label">Projects Completed</span>
+                            <span class="stat-number">14+</span>
+                            <span class="stat-label" data-key="about_projects">Projects Completed</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">30+</span>
-                            <span class="stat-label">Happy Clients</span>
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label" data-key="about_clients">Happy Clients</span>
                         </div>
                     </div>
                 </div>
@@ -88,23 +99,23 @@
                 <div class="about-list">
                     <div class="list-item">
                         <div class="list-icon">🎨</div>
-                        <h3>Design</h3>
-                        <p>UI/UX, Branding, and Visual Identity design in Figma</p>
+                        <h3 data-key="skill_design">Design</h3>
+                        <p data-key="about_design_desc">UI/UX, Branding, and Visual Identity design in Figma</p>
                     </div>
                     <div class="list-item">
                         <div class="list-icon">🎬</div>
-                        <h3>Media</h3>
-                        <p>Video editing, Photography, and Content creation</p>
+                        <h3 data-key="skill_media">Media</h3>
+                        <p data-key="about_media_desc">Video editing, Photography, and Content creation</p>
                     </div>
                     <div class="list-item">
                         <div class="list-icon">🏗️</div>
-                        <h3>3D</h3>
-                        <p>3D modeling, Product visualization in Blender</p>
+                        <h3 data-key="skill_3d">3D</h3>
+                        <p data-key="about_3d_desc">3D modeling, Product visualization in Blender</p>
                     </div>
                     <div class="list-item">
                         <div class="list-icon">💻</div>
-                        <h3>Development</h3>
-                        <p>HTML, CSS, JavaScript, Web technologies</p>
+                        <h3 data-key="skill_dev">Development</h3>
+                        <p data-key="about_dev_desc">HTML, CSS, JavaScript, Web technologies</p>
                     </div>
                 </div>
             </div>
@@ -115,13 +126,13 @@
     <section id="skills" class="section skills">
         <div class="container">
             <div class="section-header">
-                <h2>Skills & Tools</h2>
+                <h2 data-key="section_skills">Skills & Tools</h2>
                 <div class="header-line"></div>
             </div>
 
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3 class="category-title">Design</h3>
+                    <h3 class="category-title" data-key="skill_design">Design</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Figma</span>
                         <span class="skill-tag">UI/UX Design</span>
@@ -133,7 +144,7 @@
                 </div>
 
                 <div class="skill-category">
-                    <h3 class="category-title">3D & Graphics</h3>
+                    <h3 class="category-title" data-key="skill_3d_graphics">3D & Graphics</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Blender</span>
                         <span class="skill-tag">3D Modeling</span>
@@ -145,7 +156,7 @@
                 </div>
 
                 <div class="skill-category">
-                    <h3 class="category-title">Media Production</h3>
+                    <h3 class="category-title" data-key="skill_media_production">Media Production</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Video Editing</span>
                         <span class="skill-tag">Motion Graphics</span>
@@ -157,7 +168,7 @@
                 </div>
 
                 <div class="skill-category">
-                    <h3 class="category-title">Development</h3>
+                    <h3 class="category-title" data-key="skill_dev">Development</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">HTML5</span>
                         <span class="skill-tag">CSS3</span>
@@ -170,7 +181,7 @@
             </div>
 
             <div class="skills-interactive">
-                <h3>Try hovering over skills to see proficiency levels</h3>
+                <h3 data-key="skill_proficiency_hint">Try hovering over skills to see proficiency levels</h3>
                 <div class="proficiency-bar">
                     <div class="bar-segment" style="--progress: 95%; --color: #FF6B6B;" data-progress="95%">
                         <span class="bar-label">UI/UX Design</span>
@@ -196,7 +207,7 @@
     <section id="projects" class="section projects">
         <div class="container">
             <div class="section-header">
-                <h2>Featured Projects</h2>
+                <h2 data-key="section_projects">Featured Projects</h2>
                 <div class="header-line"></div>
             </div>
 
@@ -284,7 +295,7 @@
     <section class="section experience">
         <div class="container">
             <div class="section-header">
-                <h2>Experience</h2>
+                <h2 data-key="section_experience">Experience</h2>
                 <div class="header-line"></div>
             </div>
 
@@ -293,8 +304,8 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-period">2023 — Present</div>
-                        <h3>Freelance Designer & Developer</h3>
-                        <p>Creating stunning web designs, 3D visualizations, and digital content for global clients. Specializing in UI/UX design, brand development, and product visualization.</p>
+                        <h3 data-key="experience_title">Freelance Designer & Developer</h3>
+                        <p data-key="experience_desc">Creating stunning web designs, 3D visualizations, and digital content for global clients. Specializing in UI/UX design, brand development, and product visualization.</p>
                         <div class="timeline-tags">
                             <span>UI/UX</span>
                             <span>Figma</span>
@@ -312,19 +323,19 @@
     <section id="contact" class="section contact">
         <div class="container">
             <div class="section-header">
-                <h2>Let's Work Together</h2>
+                <h2 data-key="section_contact">Let's Work Together</h2>
                 <div class="header-line"></div>
             </div>
 
             <div class="contact-content">
                 <div class="contact-info">
-                    <p class="contact-intro">I'm always interested in hearing about new projects and opportunities. Let's connect!</p>
+                    <p class="contact-intro" data-key="contact_intro">I'm always interested in hearing about new projects and opportunities. Let's connect!</p>
                     
                     <div class="contact-methods">
                         <div class="contact-method">
                             <div class="method-icon">✉️</div>
                             <div class="method-content">
-                                <h4>Email</h4>
+                                <h4 data-key="contact_email">Email</h4>
                                 <a href="mailto:abdumalikabdumalikov72@gmail.com">abdumalikabdumalikov72@gmail.com</a>
                             </div>
                         </div>
@@ -332,7 +343,7 @@
                         <div class="contact-method">
                             <div class="method-icon">💬</div>
                             <div class="method-content">
-                                <h4>Telegram</h4>
+                                <h4 data-key="contact_telegram">Telegram</h4>
                                 <a href="https://t.me/abdumalikovvvvvvv" target="_blank">@abdumalikovvvvvvv</a>
                             </div>
                         </div>
@@ -340,7 +351,7 @@
                         <div class="contact-method">
                             <div class="method-icon">📍</div>
                             <div class="method-content">
-                                <h4>Location</h4>
+                                <h4 data-key="contact_location">Location</h4>
                                 <p>Tajikistan</p>
                             </div>
                         </div>
@@ -371,7 +382,7 @@
                         <textarea id="message" name="message" placeholder="Your message" rows="6" data-fs-field required></textarea>
                         <span data-fs-error="message" class="form-error"></span>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-large" data-fs-submit-btn>Send Message</button>
+                    <button type="submit" class="btn btn-primary btn-large" data-fs-submit-btn data-key="contact_form_submit">Send Message</button>
                     <div data-fs-success class="form-success" style="display: none; margin-top: 1rem; padding: 1rem; background: rgba(0, 169, 206, 0.1); border-radius: 8px; color: #00A9CE; font-size: 0.9rem;">✓ Message sent successfully! I'll get back to you soon.</div>
                     <div data-fs-error class="form-error-general" style="display: none; margin-top: 1rem; padding: 1rem; background: rgba(255, 107, 53, 0.1); border-radius: 8px; color: #FF6B35; font-size: 0.9rem;"></div>
                 </form>
@@ -384,14 +395,14 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-text">
-                    <p>© 2026 Abdumalik Abdumalikov. All rights reserved.</p>
-                    <p class="easter-egg" id="easterEgg">Made with ❤️ and some magic ✨</p>
+                    <p data-key="footer_copyright">© 2026 Abdumalik Abdumalikov. All rights reserved.</p>
+                    <p class="easter-egg" id="easterEgg" data-key="footer_made_with">Made with ❤️ and some magic ✨</p>
                 </div>
                 <div class="footer-nav">
-                    <a href="#about">About</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#about" data-key="nav_about">About</a>
+                    <a href="#skills" data-key="nav_skills">Skills</a>
+                    <a href="#projects" data-key="nav_projects">Projects</a>
+                    <a href="#contact" data-key="nav_contact">Contact</a>
                 </div>
             </div>
         </div>
@@ -423,3 +434,4 @@
 </body>
 
 </html>
+
