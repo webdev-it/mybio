@@ -45,38 +45,8 @@ body {
 }
 
 /* ============================================
-   CURSOR & INTERACTIONS
+   INTERACTIONS
    ============================================ */
-.cursor {
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    border: 2px solid var(--accent);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9999;
-    display: none;
-    animation: pulse 2s infinite;
-}
-
-body.custom-cursor .cursor {
-    display: block;
-}
-
-@keyframes pulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.7); }
-    50% { box-shadow: 0 0 0 10px rgba(255, 107, 53, 0); }
-}
-
-.cursor-trail {
-    position: fixed;
-    width: 10px;
-    height: 10px;
-    background: var(--accent);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9998;
-}
 
 /* ============================================
    NAVIGATION
@@ -91,6 +61,11 @@ body.custom-cursor .cursor {
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border);
     transition: var(--transition);
+    transform: translateY(0);
+}
+
+.navbar.hide {
+    transform: translateY(-100%);
 }
 
 body.dark-mode .navbar {
@@ -974,6 +949,17 @@ body.dark-mode .navbar {
     outline: none;
     border-color: var(--accent);
     box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+.form-error {
+    display: block;
+    font-size: 0.8rem;
+    color: #FF6B35;
+    margin-top: 0.4rem;
+}
+
+[aria-invalid="true"] {
+    border-color: #FF6B35 !important;
 }
 
 /* ============================================

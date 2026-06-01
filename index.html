@@ -8,10 +8,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Cursor -->
-    <div class="cursor"></div>
-    <div class="cursor-trail"></div>
-
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -350,27 +346,34 @@
                         </div>
                     </div>
 
-                    <div class="social-links">
+                    <!--<div class="social-links">
                         <h4>Also on</h4>
-                        <div class="social-icons">
-                            <a href="https://t.me/abdumalikovvvvvvv" target="_blank" class="social-icon" title="Telegram">📱</a>
-                            <a href="#" class="social-icon" title="Instagram">📸</a>
-                            <a href="#" class="social-icon" title="YouTube">🎥</a>
-                        </div>
-                    </div>
+                        <div class="social-icons"> 
+  <a href="https://t.me/abdumalikovvvvvvv" target="_blank" class="social-icon" title="Telegram">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z" fill="#24A1DE"/>
+    </svg>
+  </a> 
+</div>
+                    </div>-->
                 </div>
 
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form" id="my-form">
                     <div class="form-group">
-                        <input type="text" name="from_name" placeholder="Your name" required>
+                        <input type="text" id="name" name="name" placeholder="Your name" data-fs-field required>
+                        <span data-fs-error="name" class="form-error"></span>
                     </div>
                     <div class="form-group">
-                        <input type="email" name="from_email" placeholder="Your email" required>
+                        <input type="email" id="email" name="email" placeholder="Your email" data-fs-field required>
+                        <span data-fs-error="email" class="form-error"></span>
                     </div>
                     <div class="form-group">
-                        <textarea name="message" placeholder="Your message" rows="6" required></textarea>
+                        <textarea id="message" name="message" placeholder="Your message" rows="6" data-fs-field required></textarea>
+                        <span data-fs-error="message" class="form-error"></span>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                    <button type="submit" class="btn btn-primary btn-large" data-fs-submit-btn>Send Message</button>
+                    <div data-fs-success class="form-success" style="display: none; margin-top: 1rem; padding: 1rem; background: rgba(0, 169, 206, 0.1); border-radius: 8px; color: #00A9CE; font-size: 0.9rem;">✓ Message sent successfully! I'll get back to you soon.</div>
+                    <div data-fs-error class="form-error-general" style="display: none; margin-top: 1rem; padding: 1rem; background: rgba(255, 107, 53, 0.1); border-radius: 8px; color: #FF6B35; font-size: 0.9rem;"></div>
                 </form>
             </div>
         </div>
@@ -410,7 +413,13 @@
     <!-- Loading bar -->
     <div class="loading-bar"></div>
 
+    <script>
+        window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+        formspree('initForm', { formElement: '#my-form', formId: 'xnjrkerd' });
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
     <script src="script.js"></script>
+    <script src="header-hide.js"></script>
 </body>
 
 </html>

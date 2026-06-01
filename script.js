@@ -1,19 +1,14 @@
 // ============================================
 // Abdumalik's Portfolio - Interactive Script
-// With Easter Eggs & Cool Features
-// ============================================
 
-// Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
     initializePortfolio();
 });
 
 function initializePortfolio() {
-    setupCursor();
     setupNavigation();
     setupThemeToggle();
     setupEasterEggs();
-    setupFormValidation();
     setupScrollAnimations();
     setupLoadingBar();
     setupProjectCards();
@@ -23,45 +18,7 @@ function initializePortfolio() {
     setupEmailCopy();
 }
 
-// ============================================
-// CUSTOM CURSOR
-// ============================================
-function setupCursor() {
-    const cursor = document.querySelector('.cursor');
-    const cursorTrail = document.querySelector('.cursor-trail');
-    
-    if (!cursor || !cursorTrail) return;
-    
-    let mouseX = 0;
-    let mouseY = 0;
-    let trailX = 0;
-    let trailY = 0;
-    
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        
-        cursor.style.left = mouseX - 10 + 'px';
-        cursor.style.top = mouseY - 10 + 'px';
-        
-        // Smooth trail follow
-        setTimeout(() => {
-            trailX = mouseX - 5;
-            trailY = mouseY - 5;
-            cursorTrail.style.left = trailX + 'px';
-            cursorTrail.style.top = trailY + 'px';
-        }, 50);
-    });
-    
-    // Show custom cursor on hover
-    document.addEventListener('mouseenter', () => {
-        document.body.classList.add('custom-cursor');
-    });
-}
 
-// ============================================
-// SMOOTH NAVIGATION
-// ============================================
 function setupNavigation() {
     const navLinks = document.querySelectorAll('.nav-link');
     
@@ -78,9 +35,7 @@ function setupNavigation() {
     });
 }
 
-// ============================================
-// THEME TOGGLE (Light/Dark Mode)
-// ============================================
+
 function setupThemeToggle() {
     const themeToggle = document.getElementById('themeToggle');
     
@@ -101,11 +56,9 @@ function setupThemeToggle() {
     themeToggle.addEventListener('click', toggleTheme);
 }
 
-// ============================================
-// EASTER EGGS & SECRET MESSAGES
-// ============================================
+
 function setupEasterEggs() {
-    // Easter Egg 1: Click footer message
+    
     const easterEgg = document.getElementById('easterEgg');
     const easterModal = document.getElementById('easterEggModal');
     const modalClose = document.querySelector('.modal-close');
@@ -133,7 +86,7 @@ function setupEasterEggs() {
         });
     }
     
-    // Easter Egg 2: Konami Code (↑ ↑ ↓ ↓ ← → ← → B A)
+    // Easter Egg: Konami Code (↑ ↑ ↓ ↓ ← → ← → B A)
     const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
     let konamiIndex = 0;
     
@@ -151,7 +104,7 @@ function setupEasterEggs() {
         }
     });
     
-    // Easter Egg 3: Triple click on logo
+    // Easter Egg: Triple click on logo
     const logo = document.querySelector('.nav-logo');
     let clickCount = 0;
     let clickTimeout;
@@ -173,7 +126,7 @@ function setupEasterEggs() {
     }
 }
 
-// Confetti animation
+
 function triggerConfetti() {
     const confetti = document.getElementById('confetti');
     if (!confetti) return;
@@ -194,7 +147,6 @@ function triggerConfetti() {
         setTimeout(() => piece.remove(), 4000);
     }
     
-    // Add fall animation
     if (!document.querySelector('style[data-fall]')) {
         const style = document.createElement('style');
         style.setAttribute('data-fall', 'true');
@@ -210,7 +162,7 @@ function triggerConfetti() {
     }
 }
 
-// Konami code effect
+
 function triggerKonamiEffect() {
     const body = document.body;
     const originalFilter = body.style.filter;
@@ -229,7 +181,7 @@ function triggerKonamiEffect() {
     }, 600);
 }
 
-// Logo triple-click effect
+
 function triggerLogoEffect() {
     const logo = document.querySelector('.nav-logo');
     if (!logo) return;
@@ -241,47 +193,8 @@ function triggerLogoEffect() {
     }, 600);
 }
 
-// ============================================
-// FORM VALIDATION
-// ============================================
-function setupFormValidation() {
-    const form = document.getElementById('contactForm');
-    if (!form) return;
-    
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const inputs = form.querySelectorAll('input, textarea');
-        let isValid = true;
-        
-        inputs.forEach(input => {
-            if (!input.value.trim()) {
-                input.style.borderColor = '#FF6B35';
-                isValid = false;
-            } else {
-                input.style.borderColor = '';
-            }
-        });
-        
-        if (isValid) {
-            // Simulate send
-            const submitBtn = form.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = '✓ Sent!';
-            submitBtn.style.background = '#00A9CE';
-            
-            setTimeout(() => {
-                submitBtn.textContent = originalText;
-                submitBtn.style.background = '';
-                form.reset();
-            }, 2000);
-        }
-    });
-}
 
-// ============================================
-// SCROLL ANIMATIONS
-// ============================================
+
 function setupScrollAnimations() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -300,9 +213,7 @@ function setupScrollAnimations() {
     });
 }
 
-// ============================================
-// LOADING BAR
-// ============================================
+
 function setupLoadingBar() {
     const loadingBar = document.querySelector('.loading-bar');
     if (!loadingBar) return;
@@ -314,9 +225,7 @@ function setupLoadingBar() {
     }, 500);
 }
 
-// ============================================
-// PROJECT CARDS INTERACTION
-// ============================================
+
 function setupProjectCards() {
     const projectCards = document.querySelectorAll('.project-card');
     
@@ -331,9 +240,7 @@ function setupProjectCards() {
     });
 }
 
-// ============================================
-// SKILL TAG ANIMATION
-// ============================================
+
 function setupSkillTags() {
     const skillTags = document.querySelectorAll('.skill-tag');
     
@@ -350,9 +257,7 @@ function setupSkillTags() {
     });
 }
 
-// ============================================
-// PARALLAX EFFECT ON HERO
-// ============================================
+
 function setupParallax() {
     window.addEventListener('scroll', () => {
         const hero = document.querySelector('.hero');
@@ -368,12 +273,9 @@ function setupParallax() {
     });
 }
 
-// ============================================
-// KEYBOARD SHORTCUTS
-// ============================================
+
 function setupKeyboardShortcuts() {
     document.addEventListener('keydown', (e) => {
-        // Escape to close modals
         if (e.key === 'Escape') {
             const modal = document.getElementById('easterEggModal');
             if (modal) {
@@ -383,9 +285,7 @@ function setupKeyboardShortcuts() {
     });
 }
 
-// ============================================
-// COPY EMAIL ON CLICK
-// ============================================
+
 function setupEmailCopy() {
     const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
     
@@ -405,9 +305,7 @@ function setupEmailCopy() {
     });
 }
 
-// ============================================
-// CONSOLE EASTER EGG
-// ============================================
+
 console.log('%c👋 Hey there, curious developer!', 'font-size: 20px; font-weight: bold; color: #FF6B35;');
 console.log('%cDid you know you can:', 'font-size: 14px; color: #00A9CE;');
 console.log('%c1. Press the Konami Code (↑↑↓↓←→←→BA)', 'color: #95E1D3;');
